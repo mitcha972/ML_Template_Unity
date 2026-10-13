@@ -54,16 +54,26 @@ https://unity-technologies.github.io/ml-agents/Getting-Started/
 
 ---
 
+1. Activate your virtual environment
+   ```bash
+   cd path\to\your\project
+   venv\Scripts\activate
+   ```
+
 ## Training Agents
 
-1. Activate your virtual environment (where `ml-agents` is installed).
-2. Create or modify a YAML config file for training (see the `config/` folder for examples).
-3. Run the training command:  
+1. Activate your virtual environment
+   ```bash
+   cd path\to\your\project
+   mlagents-learn
+   ```
+3. Create or modify a YAML config file for training (see the `config/` folder for examples).
+4. Run the training command:  
    ```bash
    mlagents-learn <path-to-config> --run-id=<your_run_id> --time-scale=1
    mlagents-learn config\ppo\<file-name>.yaml --run-id=<your_run_id> --time-scale=1
    ```
-4. You can rerive the training data after by running commad
+5. You can rerive the training data after by running commad
    ```bash
    tensorboard --logdir results/your_run_id
    ```
